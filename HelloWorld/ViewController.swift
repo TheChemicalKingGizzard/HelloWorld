@@ -9,11 +9,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var helloLabel: UILabel!
+
+    @IBOutlet var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        helloLabel.isHidden = true
+        startButton.layer.cornerRadius = 15
     }
 
+    @IBAction func startButtonPressed() {
+        helloLabel.isHidden.toggle()
+        
+        if helloLabel.isHidden{
+            startButton.setTitle("Show text", for: .normal)
+        } else {
+            startButton.setTitle("Hide Text", for: .normal)
+        }
 
+    }
+    
 }
 
