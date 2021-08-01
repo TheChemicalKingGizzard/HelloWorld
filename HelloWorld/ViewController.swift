@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         helloLabel.isHidden.toggle()
         
         if helloLabel.isHidden{
-            startButton.setTitle("Show text", for: .normal)
+            startButton.setTitle("Show Text", for: .normal)
         } else {
             startButton.setTitle("Hide Text", for: .normal)
         }
